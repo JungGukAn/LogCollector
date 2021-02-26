@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{F0BE60BC-7640-41B0-AD12-67094A228D33}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>LogControllerCore</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Formatters\BsonFormatter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Formatters\JsonFormatter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Formatters\MessagePackFormatter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Formatters\ILogFormatter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LogMiddleware.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LogPipeline.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LogExtentions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LogBuffer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LogWorker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UnixProcessExitHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Defines\Common.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Defines\HttpLogCollectorOption.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Compressers\GZipCompresser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Compressers\ILogCompresser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Defines\LogDynamicObject.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Defines\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Compressers\" />
+  </ItemGroup>
+</Project>
